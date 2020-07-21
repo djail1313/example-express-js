@@ -1,0 +1,1752 @@
+{
+	"info": {
+		"_postman_id": "2ddf2ce6-1229-4c92-b905-7a9da4b8c19f",
+		"name": "To-do List API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": null,
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"email@email.com\",\n\t\"password\": \"helloworld\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/v1/auth/login",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "954454a6-f259-4afa-83f5-472e8278b9b2",
+							"name": "Failed - form validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/login",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:18:50 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-FDTmfBFmRhkitKyGlPF2AihJeqQ\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"errors\":[{\"email\":\"Email doesn't exists\"},{\"email\":\"Invalid email format\"},{\"password\":\"Password doesn't exists\"}]}"
+						},
+						{
+							"id": "8db0882b-beb7-4031-b18b-01e5a2e781b3",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"email@email.com\",\n\t\"password\": \"helloworld\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/login",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "364",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:30:28 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16c-GzKgjLowfp7kxj021YzFZa8JE3E\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"tokenType\":\"bearer\",\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoxOSwidXNlcklkIjo0LCJpYXQiOjE1OTUyOTE0MjgsImV4cCI6MTU5Nzg4MzQyOCwiaXNzIjoiZW1haWxAZW1haWwuY29tIn0.N88wnLewdtxKtX8V3UZdhY3DSfn1uGClRmt0ssjl568\",\"user\":{\"id\":4,\"name\":\"qwe\",\"email\":\"email@email.com\",\"createdAt\":\"2020-07-20T23:59:07.000Z\",\"updatedAt\":\"2020-07-20T23:59:07.000Z\"}}"
+						},
+						{
+							"id": "c3ff11b0-6144-4455-a2ac-82d7b20976d6",
+							"name": "Failed - wron username/password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"salah@email.com\",\n\t\"password\": \"helloworld\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/login",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:19:30 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-697jy4o2l22LZemsaQax+2kvBHc\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Your email or password is invalid\"}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"qwe\",\n    \"email\": \"email5@email.com\",\n\t\"password\": \"helloworld\",\n    \"confirmPassword\": \"helloworld\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/v1/auth/register",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3b726ad4-bf43-4b74-88d3-b6977c9ce73d",
+							"name": "Failed - confirmation passwrod doesnt match with password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"qwe\",\n    \"email\": \"email@email.com\",\n\t\"password\": \"helloworlda\",\n    \"confirmPassword\": \"helloworld\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/register",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:32:27 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-YQAjb+5jYIYcuyHK1+ou9TV8abY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"errors\":[{\"confirmPassword\":\"Password doesn't match\"}]}"
+						},
+						{
+							"id": "d3ff3134-f0bd-4d46-8ffc-42d7f0605d0c",
+							"name": "Failed - duplicate email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"qwe\",\n    \"email\": \"email@email.com\",\n\t\"password\": \"helloworld\",\n    \"confirmPassword\": \"helloworld\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/register",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:32:09 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-HI87yRA9+mbI94uq6tXihn+7uok\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Email already registered\"}"
+						},
+						{
+							"id": "fcbe65b9-3c75-4aa8-9d49-9b99a0399ba0",
+							"name": "Failed - form validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/register",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:31:36 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d0-4t7hgwy7iN1OfLvrYibT9WW74ZM\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"errors\":[{\"name\":\"Name doesn't exsists\"},{\"email\":\"Email doesn't exists\"},{\"email\":\"Invalid email format\"},{\"password\":\"Password doesn't exists\"},{\"confirmPassword\":\"Confirmation password doesn't exists\"}]}"
+						},
+						{
+							"id": "f7ef8072-66c7-4f09-ae30-018908b96b89",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"qwe\",\n    \"email\": \"email5@email.com\",\n\t\"password\": \"helloworld\",\n    \"confirmPassword\": \"helloworld\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/auth/register",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "369",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:32:57 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"171-OJD8pHn1Obn3Y8fQYGIgJsMjh/s\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"tokenType\":\"bearer\",\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoyMCwidXNlcklkIjoxMSwiaWF0IjoxNTk1MjkxNTc3LCJleHAiOjE1OTc4ODM1NzcsImlzcyI6ImVtYWlsNUBlbWFpbC5jb20ifQ.-ZPvAZ4XPNjAcb8zAcIQzSsvIJmibXtupFqmZZ4m6_w\",\"user\":{\"id\":11,\"name\":\"qwe\",\"email\":\"email5@email.com\",\"updatedAt\":\"2020-07-21T00:32:57.569Z\",\"createdAt\":\"2020-07-21T00:32:57.569Z\"}}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{api_url}}/v1/tasks?page=1&perPage=100",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "30a17be4-813b-40be-913a-4e73b97de5c8",
+							"name": "Failed - unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:34:42 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-ZiHA546UhYjZ/f/19Zak6La+6GY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"You are not authorized to access this resource\"}"
+						},
+						{
+							"id": "6e50a9e8-44ef-4357-8a53-57544fee4b65",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks?page=1&perPage=100",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "15710",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:23:46 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d5e-1kmxR7C/16N/e8LmKlJz05W4xIM\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"docs\":[{\"id\":103,\"userId\":4,\"title\":\"judul 99\",\"content\":\"konten 99\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":102,\"userId\":4,\"title\":\"judul 98\",\"content\":\"konten 98\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":101,\"userId\":4,\"title\":\"judul 97\",\"content\":\"konten 97\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":100,\"userId\":4,\"title\":\"judul 96\",\"content\":\"konten 96\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":99,\"userId\":4,\"title\":\"judul 95\",\"content\":\"konten 95\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":98,\"userId\":4,\"title\":\"judul 94\",\"content\":\"konten 94\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":97,\"userId\":4,\"title\":\"judul 93\",\"content\":\"konten 93\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":96,\"userId\":4,\"title\":\"judul 92\",\"content\":\"konten 92\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":95,\"userId\":4,\"title\":\"judul 91\",\"content\":\"konten 91\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":94,\"userId\":4,\"title\":\"judul 90\",\"content\":\"konten 90\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":93,\"userId\":4,\"title\":\"judul 89\",\"content\":\"konten 89\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":92,\"userId\":4,\"title\":\"judul 88\",\"content\":\"konten 88\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":91,\"userId\":4,\"title\":\"judul 87\",\"content\":\"konten 87\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":90,\"userId\":4,\"title\":\"judul 86\",\"content\":\"konten 86\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":89,\"userId\":4,\"title\":\"judul 85\",\"content\":\"konten 85\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":88,\"userId\":4,\"title\":\"judul 84\",\"content\":\"konten 84\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":87,\"userId\":4,\"title\":\"judul 83\",\"content\":\"konten 83\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":86,\"userId\":4,\"title\":\"judul 82\",\"content\":\"konten 82\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":85,\"userId\":4,\"title\":\"judul 81\",\"content\":\"konten 81\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":84,\"userId\":4,\"title\":\"judul 80\",\"content\":\"konten 80\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":83,\"userId\":4,\"title\":\"judul 79\",\"content\":\"konten 79\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":82,\"userId\":4,\"title\":\"judul 78\",\"content\":\"konten 78\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":81,\"userId\":4,\"title\":\"judul 77\",\"content\":\"konten 77\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":80,\"userId\":4,\"title\":\"judul 76\",\"content\":\"konten 76\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":79,\"userId\":4,\"title\":\"judul 75\",\"content\":\"konten 75\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":78,\"userId\":4,\"title\":\"judul 74\",\"content\":\"konten 74\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":77,\"userId\":4,\"title\":\"judul 73\",\"content\":\"konten 73\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":76,\"userId\":4,\"title\":\"judul 72\",\"content\":\"konten 72\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":75,\"userId\":4,\"title\":\"judul 71\",\"content\":\"konten 71\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":74,\"userId\":4,\"title\":\"judul 70\",\"content\":\"konten 70\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":73,\"userId\":4,\"title\":\"judul 69\",\"content\":\"konten 69\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":72,\"userId\":4,\"title\":\"judul 68\",\"content\":\"konten 68\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":71,\"userId\":4,\"title\":\"judul 67\",\"content\":\"konten 67\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":70,\"userId\":4,\"title\":\"judul 66\",\"content\":\"konten 66\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":69,\"userId\":4,\"title\":\"judul 65\",\"content\":\"konten 65\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":68,\"userId\":4,\"title\":\"judul 64\",\"content\":\"konten 64\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":67,\"userId\":4,\"title\":\"judul 63\",\"content\":\"konten 63\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":66,\"userId\":4,\"title\":\"judul 62\",\"content\":\"konten 62\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":65,\"userId\":4,\"title\":\"judul 61\",\"content\":\"konten 61\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":64,\"userId\":4,\"title\":\"judul 60\",\"content\":\"konten 60\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":63,\"userId\":4,\"title\":\"judul 59\",\"content\":\"konten 59\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":62,\"userId\":4,\"title\":\"judul 58\",\"content\":\"konten 58\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":61,\"userId\":4,\"title\":\"judul 57\",\"content\":\"konten 57\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":60,\"userId\":4,\"title\":\"judul 56\",\"content\":\"konten 56\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":59,\"userId\":4,\"title\":\"judul 55\",\"content\":\"konten 55\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":58,\"userId\":4,\"title\":\"judul 54\",\"content\":\"konten 54\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":57,\"userId\":4,\"title\":\"judul 53\",\"content\":\"konten 53\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":56,\"userId\":4,\"title\":\"judul 52\",\"content\":\"konten 52\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":55,\"userId\":4,\"title\":\"judul 51\",\"content\":\"konten 51\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":54,\"userId\":4,\"title\":\"judul 50\",\"content\":\"konten 50\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":53,\"userId\":4,\"title\":\"judul 49\",\"content\":\"konten 49\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":52,\"userId\":4,\"title\":\"judul 48\",\"content\":\"konten 48\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":51,\"userId\":4,\"title\":\"judul 47\",\"content\":\"konten 47\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":50,\"userId\":4,\"title\":\"judul 46\",\"content\":\"konten 46\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":49,\"userId\":4,\"title\":\"judul 45\",\"content\":\"konten 45\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":48,\"userId\":4,\"title\":\"judul 44\",\"content\":\"konten 44\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":47,\"userId\":4,\"title\":\"judul 43\",\"content\":\"konten 43\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":46,\"userId\":4,\"title\":\"judul 42\",\"content\":\"konten 42\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":45,\"userId\":4,\"title\":\"judul 41\",\"content\":\"konten 41\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":44,\"userId\":4,\"title\":\"judul 40\",\"content\":\"konten 40\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":43,\"userId\":4,\"title\":\"judul 39\",\"content\":\"konten 39\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":42,\"userId\":4,\"title\":\"judul 38\",\"content\":\"konten 38\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":41,\"userId\":4,\"title\":\"judul 37\",\"content\":\"konten 37\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":40,\"userId\":4,\"title\":\"judul 36\",\"content\":\"konten 36\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":39,\"userId\":4,\"title\":\"judul 35\",\"content\":\"konten 35\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":38,\"userId\":4,\"title\":\"judul 34\",\"content\":\"konten 34\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":37,\"userId\":4,\"title\":\"judul 33\",\"content\":\"konten 33\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":36,\"userId\":4,\"title\":\"judul 32\",\"content\":\"konten 32\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":35,\"userId\":4,\"title\":\"judul 31\",\"content\":\"konten 31\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":34,\"userId\":4,\"title\":\"judul 30\",\"content\":\"konten 30\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":33,\"userId\":4,\"title\":\"judul 29\",\"content\":\"konten 29\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":32,\"userId\":4,\"title\":\"judul 28\",\"content\":\"konten 28\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":31,\"userId\":4,\"title\":\"judul 27\",\"content\":\"konten 27\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":30,\"userId\":4,\"title\":\"judul 26\",\"content\":\"konten 26\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":29,\"userId\":4,\"title\":\"judul 25\",\"content\":\"konten 25\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":28,\"userId\":4,\"title\":\"judul 24\",\"content\":\"konten 24\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":27,\"userId\":4,\"title\":\"judul 23\",\"content\":\"konten 23\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":26,\"userId\":4,\"title\":\"judul 22\",\"content\":\"konten 22\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":25,\"userId\":4,\"title\":\"judul 21\",\"content\":\"konten 21\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":24,\"userId\":4,\"title\":\"judul 20\",\"content\":\"konten 20\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":23,\"userId\":4,\"title\":\"judul 19\",\"content\":\"konten 19\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":22,\"userId\":4,\"title\":\"judul 18\",\"content\":\"konten 18\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":21,\"userId\":4,\"title\":\"judul 17\",\"content\":\"konten 17\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":20,\"userId\":4,\"title\":\"judul 16\",\"content\":\"konten 16\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":19,\"userId\":4,\"title\":\"judul 15\",\"content\":\"konten 15\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":18,\"userId\":4,\"title\":\"judul 14\",\"content\":\"konten 14\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":17,\"userId\":4,\"title\":\"judul 13\",\"content\":\"konten 13\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":16,\"userId\":4,\"title\":\"judul 12\",\"content\":\"konten 12\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":15,\"userId\":4,\"title\":\"judul 11\",\"content\":\"konten 11\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":14,\"userId\":4,\"title\":\"judul 10\",\"content\":\"konten 10\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":13,\"userId\":4,\"title\":\"judul 9\",\"content\":\"konten 9\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":12,\"userId\":4,\"title\":\"judul 8\",\"content\":\"konten 8\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":11,\"userId\":4,\"title\":\"judul 7\",\"content\":\"konten 7\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":10,\"userId\":4,\"title\":\"judul 5\",\"content\":\"konten 5\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":9,\"userId\":4,\"title\":\"judul 6\",\"content\":\"konten 6\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":8,\"userId\":4,\"title\":\"judul 4\",\"content\":\"konten 4\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":7,\"userId\":4,\"title\":\"judul 2\",\"content\":\"konten 2\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":6,\"userId\":4,\"title\":\"judul 1\",\"content\":\"konten 1\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":5,\"userId\":4,\"title\":\"judul 3\",\"content\":\"konten 3\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null},{\"id\":4,\"userId\":4,\"title\":\"judul 0\",\"content\":\"konten 0\",\"createdAt\":\"2020-07-21T01:07:21.000Z\",\"updatedAt\":\"2020-07-21T01:07:21.000Z\",\"deletedAt\":null}],\"pages\":2,\"total\":102}"
+						}
+					]
+				},
+				{
+					"name": "Get task by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{api_url}}/v1/tasks/2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3d3a7301-f556-4809-9fdc-50856f9b2b6f",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:32:04 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-BUWm3dheGCGF/0iv3O+t17MjJNc\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":2,\"userId\":4,\"title\":\"baru\",\"content\":\"biri\",\"createdAt\":\"2020-07-21T00:55:57.000Z\",\"updatedAt\":\"2020-07-21T00:55:57.000Z\",\"deletedAt\":null}"
+						},
+						{
+							"id": "436582e1-3fc4-4b3d-85be-ab2325b6b65e",
+							"name": "Failed - not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:32:59 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-MHDSHEeakQ3QeijgQMEHeol2HWg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Task not found\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete task by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{api_url}}/v1/tasks/4",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "46ae285b-760d-4ca3-88d7-1d431f177cb8",
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/3",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 02:00:20 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"id": "2448fd34-6260-4af8-9471-ba9b823b301f",
+							"name": "Failed - not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:32:59 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-MHDSHEeakQ3QeijgQMEHeol2HWg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Task not found\"}"
+						},
+						{
+							"id": "16e987f1-5b18-4bd3-9f91-4b37ced20f70",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/4",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"4"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 02:01:28 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-ZiHA546UhYjZ/f/19Zak6La+6GY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"You are not authorized to access this resource\"}"
+						}
+					]
+				},
+				{
+					"name": "Create new task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"title 1\",\n\t\"content\": \"content 1\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/v1/tasks",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3e4d35f7-00e6-445e-9a80-29c1fd9eef76",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:41:18 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-ZiHA546UhYjZ/f/19Zak6La+6GY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"You are not authorized to access this resource\"}"
+						},
+						{
+							"id": "e8640686-9b60-4773-b2e2-0c8e97f8e5e6",
+							"name": "Failed - form validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:40:36 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-4krqNcLnb5inJCGN5dz3qac8q28\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"errors\":[{\"title\":\"Title doesn't exists\"},{\"content\":\"Content doesn't exists\"}]}"
+						},
+						{
+							"id": "2084641f-272c-491a-8435-13bb4f0fa6aa",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"title 1\",\n\t\"content\": \"content 1\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:50:42 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-d3mz0l0cOeubaRcBLQVVGsnu+eQ\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":104,\"userId\":4,\"title\":\"title 1\",\"content\":\"content 1\",\"updatedAt\":\"2020-07-21T01:50:42.928Z\",\"createdAt\":\"2020-07-21T01:50:42.928Z\"}"
+						}
+					]
+				},
+				{
+					"name": "Update task by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"baru edit\",\n\t\"content\": \"biri edit\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/v1/tasks/2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"v1",
+								"tasks",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "cfded71c-75e0-49c3-8949-81dfabdef05c",
+							"name": "Failed - task not found",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"baru edit\",\n\t\"content\": \"biri edit\"\n}"
+								},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"2"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:57:45 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-MHDSHEeakQ3QeijgQMEHeol2HWg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Task not found\"}"
+						},
+						{
+							"id": "1752ee45-4e51-4b64-bdf3-a7ab6eed31a7",
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:56:44 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-BUWm3dheGCGF/0iv3O+t17MjJNc\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":2,\"userId\":4,\"title\":\"baru\",\"content\":\"biri\",\"createdAt\":\"2020-07-21T00:55:57.000Z\",\"updatedAt\":\"2020-07-21T00:55:57.000Z\",\"deletedAt\":null}"
+						},
+						{
+							"id": "8b63a6e5-9ebf-47fd-81b8-a7be97339b87",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{api_url}}/v1/tasks/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"v1",
+										"tasks",
+										"2"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:56:23 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-ZiHA546UhYjZ/f/19Zak6La+6GY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"You are not authorized to access this resource\"}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f28d3b76-843d-4ce3-a98a-3ded875dc587",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1e027eb0-4d80-4e63-8fe1-7fa2e39f59b2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b0eb8370-b7fe-4714-9405-6922435a3ff1",
+			"key": "api_url",
+			"value": "http://localhost:3000/api",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "cea59e3f-56a6-450c-a6f0-d55d66f41cea",
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "c4ec5acb-644a-47b3-98ac-232477233ebd",
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoyMSwidXNlcklkIjo0LCJpYXQiOjE1OTUyOTE3MjMsImV4cCI6MTU5Nzg4MzcyMywiaXNzIjoiZW1haWxAZW1haWwuY29tIn0.j_kC7q1S4AvD4Tp2u_BkVhKAQlPukYqAn167DfPxo7Q",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "11bbd6a6-ac26-47b1-ab6f-182ac9ed459e",
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoyMiwidXNlcklkIjo5LCJpYXQiOjE1OTUyOTQ2NzcsImV4cCI6MTU5Nzg4NjY3NywiaXNzIjoiZW1haWw0QGVtYWlsLmNvbSJ9.nOMEv7EAnN86UOcc0iVb3IirbOST56Lk5NwfSrVsOEc",
+			"type": "string",
+			"disabled": true,
+			"description": ""
+		}
+	]
+}
